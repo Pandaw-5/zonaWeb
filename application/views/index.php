@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>Admin Zona Futsal</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -40,7 +40,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
 				<li class="text-center">
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
 					</li>
-          
+
 				
 					
                     <?php $this->load->view('menu');?>
