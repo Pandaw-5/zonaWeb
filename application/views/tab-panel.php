@@ -3,16 +3,13 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Zona Futsal</title>
+    <title>Free Bootstrap Admin Template : Binary Admin</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url();?>assets/css/font-awesome.css" rel="stylesheet" />
-     <!-- MORRIS CHART STYLES-->
-    <link href="<?php echo base_url();?>assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
-    <link href="<?php echo base_url();?>assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -37,17 +34,17 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
-					</li>
+                    </li>
           <li>
-                        <a class="active-menu"  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
+                        <a  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
                         <a  href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
+                        <a class="active-menu" href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
                         <a   href="chart"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
@@ -92,7 +89,16 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <?php $this->load->view($body)?>
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>Tabs & Panels </h2>   
+                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                       
+                    </div>
+                </div>
+                 <!-- /. ROW  -->
+                 
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
@@ -103,17 +109,6 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
     <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="<?php echo base_url();?>assets/js/jquery.metisMenu.js"></script>
-     <!-- MORRIS CHART SCRIPTS -->
-     <script src="<?php echo base_url();?>assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="<?php echo base_url();?>assets/js/morris/morris.js"></script>
-
-    <script src="<?php echo base_url();?>assets/js/dataTables/jquery.dataTables.js"></script>
-    <script src="<?php echo base_url();?>assets/js/dataTables/dataTables.bootstrap.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#dataTables-example').dataTable();
-            });
-    </script>
       <!-- CUSTOM SCRIPTS -->
     <script src="<?php echo base_url();?>assets/js/custom.js"></script>
     
