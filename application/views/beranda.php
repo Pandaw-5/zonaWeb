@@ -2,18 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
-	<!-- BOOTSTRAP STYLES-->
+    <title>MASUK | ADMIN ZONA FUTSAL</title>
+    <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url();?>assets/css/font-awesome.css" rel="stylesheet" />
-     <!-- MORRIS CHART STYLES-->
-    <link href="<?php echo base_url();?>assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
+    <!-- CUSTOM STYLES-->
     <link href="<?php echo base_url();?>assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <link href='<?php echo base_url();?>http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
     <div id="wrapper">
@@ -37,7 +36,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                 <li class="text-center">
-                    <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="zonaAdminWEB/assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
           <li>
                         <a class="active-menu"  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
@@ -51,7 +50,16 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                <li  >
                         <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
+<<<<<<< HEAD
                       
+=======
+                      <li  >
+                        <a  href="table"><i class="fa fa-table fa-3x"></i> Tabel Pemesanan</a>
+                    </li>
+                            </li>
+                        </ul>
+                      </li>  
+>>>>>>> 0e0a23b924173825c8c0397e51372dd7fb9633d7
                   
                 </ul>
                
@@ -71,16 +79,16 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="<?php echo base_url();?>assets/js/jquery-1.10.2.js"></script>
+    <script src="zonaAdminWEB/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="zonaAdminWEB/assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="<?php echo base_url();?>assets/js/jquery.metisMenu.js"></script>
+    <script src="zonaAdminWEB/assets/js/jquery.metisMenu.js"></script>
      <!-- MORRIS CHART SCRIPTS -->
-     <script src="<?php echo base_url();?>assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="<?php echo base_url();?>assets/js/morris/morris.js"></script>
+     <script src="zonaAdminWEB/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="zonaAdminWEB/assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+    <script src="zonaAdminWEB/assets/js/custom.js"></script>
     
    
 </body>
