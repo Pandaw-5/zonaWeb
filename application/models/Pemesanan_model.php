@@ -17,11 +17,11 @@ class pemesanan_model extends CI_Model{
 		$this->load->database(); //fungsi untuk memuat database
 	}
 	public function insert(){
-		$sql = sprintf("INSERT INTO pemesanan VALUES ('%s','%s','%s','%f','%d','%d','%d')", $this->id_pesan, $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar);
+		$sql = sprintf("INSERT INTO pemesanan VALUES (NULL ,'%s','%s','%f','%d','%d','%d')", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar);
 		$this->db->query($sql);
 	}
 	public function update(){
-		$sql = sprintf("UPDATE pemesanan SET id_pesan ='%s',waktu_pesan ='%s',waktu_main ='%s',durasi='%d',dp='%d',diskon='%d', total_bayar='%f' WHERE id_pesan='%s'", $this->id_pesan, $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_pesan);
+		$sql = sprintf("UPDATE pemesanan SET waktu_pesan ='%s',waktu_main ='%s',durasi='%d',dp='%d',diskon='%d', total_bayar='%f' WHERE id_pesan='%s'", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_pesan);
 		$this->db->query($sql);
 	}
 	public function delete(){

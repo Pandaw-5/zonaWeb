@@ -72,7 +72,6 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <?php $this->load->view($body)?>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->

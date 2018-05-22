@@ -2,9 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>Pemesanan</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -44,7 +43,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a   href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a  href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
                         <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
@@ -52,9 +51,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                <li  >
                         <a class="active-menu" href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
-                      <li  >
-                        <a  href="table"><i class="fa fa-table fa-3x"></i> Tabel Pemesanan</a>
-                    </li>
+                     
                     
                              
                     

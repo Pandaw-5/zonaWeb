@@ -1,10 +1,5 @@
 <?php
-class Beranda extends CI_Controller{
-
-	public function __construct(){
-		parent::__construct();
-		$this->load->helper('url');
-	}
+class beranda extends CI_Controller{
 
 	public function index() {
 		$this->load->view('beranda');

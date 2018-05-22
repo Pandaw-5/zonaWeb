@@ -16,7 +16,6 @@ class Pemesanan extends CI_Controller {
 	}
 	public function create(){
 		if(isset($_POST['btnSubmit'])){
-			$this->model->id_pesan = $_POST['id_pesan'];
 			$this->model->waktu_pesan = $_POST['waktu_pesan'];
 			$this->model->waktu_main = $_POST['waktu_main'];
 			$this->model->durasi = $_POST['durasi'];
@@ -38,7 +37,8 @@ class Pemesanan extends CI_Controller {
 	}
 	public function update ($kode_up){
 		if (isset($_POST['btnSubmit'])){
-			$this->model->id_pesan = $_POST['id_pesan'];
+			$id = $kode_up;
+			$this->model->id_pesan = $id;
 			$this->model->waktu_pesan = $_POST['waktu_pesan'];
 			$this->model->waktu_main = $_POST['waktu_main'];
 			$this->model->durasi = $_POST['durasi'];

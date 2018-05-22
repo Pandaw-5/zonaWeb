@@ -41,7 +41,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a class="active-menu" href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a class="active-menu" href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
                         <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
@@ -59,13 +59,12 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Admin Zona Futsal</h2>   
-                        <h5>Selamat datang ^_^ </h5>
+                     
                        
                     </div>
                 </div>
                  <!-- /. ROW  -->
-                 
+            <?php $this->load->view($body)?>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
