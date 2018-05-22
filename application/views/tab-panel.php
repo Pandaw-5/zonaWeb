@@ -38,50 +38,17 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
           <li>
-                        <a  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
+                        <a href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
                         <a class="active-menu" href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
-                        <a   href="chart"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
+                        <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
-                      <li  >
-                        <a  href="table"><i class="fa fa-table fa-3x"></i> Tabel Pemesanan</a>
-                    </li>
-                    
-                             
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-                               
-                            </li>
-                        </ul>
-                      </li>  
-                  
                 </ul>
                
             </div>
@@ -92,8 +59,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Tabs & Panels </h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                     <h2>Transaksi</h2>
                        
                     </div>
                 </div>

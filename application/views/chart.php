@@ -49,41 +49,14 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
-                        <a class="active-menu" href="chart"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
+                        <a class="active-menu" href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
                       <li  >
                         <a  href="table"><i class="fa fa-table fa-3x"></i> Tabel Pemesanan</a>
                     </li>
                     
                              
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-                               
-                            </li>
-                        </ul>
-                      </li>  
-                  
+                    
                 </ul>
                
             </div>
@@ -91,16 +64,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-md-12">
-                     <h2>Morris Charts</h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
-                       
-                    </div>
-                </div>
-                 <!-- /. ROW  -->
-                 
+            <?php $this->load->view($body)?>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
@@ -114,9 +78,16 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
      <!-- MORRIS CHART SCRIPTS -->
      <script src="<?php echo base_url();?>assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/morris/morris.js"></script>
+
+    <script src="<?php echo base_url();?>assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url();?>assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
       <!-- CUSTOM SCRIPTS -->
     <script src="<?php echo base_url();?>assets/js/custom.js"></script>
-    
    
 </body>
 </html>
