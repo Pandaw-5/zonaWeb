@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>Pemesanan Lapangan | Admin</title>
   <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -69,25 +69,25 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
 
   <form action="<?php echo base_url('Pemesanan/create')?>" method="post">
     <?php echo $model->labels['id_pesan']; ?><br>
-    <input type="text" name="id_pesan" size="10" maxlength="10"><br><br>
+    <input placeholder="kosongkan" type="text" name="id_pesan" size="10" maxlength="10"><br><br>
 
     <?php echo $model->labels['waktu_pesan']; ?><br>
-    <input type="text" name="waktu_pesan" size="30" maxlength="25"><br><br>
+    <input placeholder="tanggal pesan" type="date" name="waktu_pesan" size="30" maxlength="25"><br><br>
 
     <?php echo $model->labels['waktu_main']; ?><br>
-    <input type="text" name="waktu_main" size="30" maxlength="25"><br><br>
+    <input placeholder="jam" type="TIME" name="waktu_main" size="30" maxlength="25"><br><br>
 
     <?php echo $model->labels['durasi']; ?><br>
-    <textarea name="durasi"></textarea><br><br>
+    <input placeholder="saat main" type="TIME" name="durasi" size="30" maxlength="25"><br><br>
 
     <?php echo $model->labels['dp']; ?><br>
-    <textarea name="dp"></textarea><br><br>
+    <input placeholder="pembayaran pertama" type="text" name="dp" size="10" maxlength="10"><br><br>
 
     <?php echo $model->labels['diskon']; ?><br>
-    <textarea name="diskon"></textarea><br><br>
+    <input placeholder="potongan harga" type="text" name="diskon" size="10" maxlength="10"><br><br>
 
     <?php echo $model->labels['total_bayar']; ?><br>
-    <textarea name="total_bayar"></textarea><br><br>
+    <input placeholder="jumlah bayar" type="text" name="total_bayar" size="10" maxlength="10"><br><br>
 
     <input type="submit" name="btnSubmit" value="Simpan">
     <input type="button" name="batal" onclick="javascript:history.go(-1);" value="Batal">

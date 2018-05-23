@@ -25,6 +25,7 @@
 											<th width="100">Alamat</th>
 											<th width="100">No Telephon</th>
 											<th width="100">Kata Sandi</th>
+                                            <th width="100">Opsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>

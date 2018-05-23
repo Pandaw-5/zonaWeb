@@ -13,23 +13,24 @@
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                             Tabel
-                             <p><a href="<?php echo base_url('Pemesanan/create')?>"><button class="btn btn-success"><i class="fa fa-plus"></i> Tambah</button></a></p>
+                             <center><h2>Tabel</h2></center>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th width="100">Id Pesan</th>
-											<th width="100">Waktu Pesan</th>
-											<th width="100">Waktu Main</th>
-											<th width="100">Durasi</th>
-											<th width="100">DP</th>
-                                            <th width="100">Diskon</th>
-                                            <th width="100">Total Bayar </th>
+                                            <th width="100"><center>Id Pesan</center></th>
+											<th width="100"><center>Waktu Pesan</center></th>
+											<th width="100"><center>Waktu Main</center></th>
+											<th width="100"><center>Durasi</center></th>
+											<th width="100"><center>DP</center></th>
+                                            <th width="100"><center>Diskon</center></th>
+                                            <th width="100"><center>Total Bayar </center></th>
+                                            <th width="100"><center>Opsi</center></th>
                                         </tr>
                                     </thead>
+                                    <p><a href="<?php echo base_url('Pemesanan/create')?>"><button class="btn btn-success"><i class="fa fa-plus"></i> Tambah</button></a></p>
                                     <tbody>
                                         <?php 
 												foreach ($rows as $row) {
@@ -37,13 +38,13 @@
 
 											<tr>
 
-												<td><?php echo $row->id_pesan; ?></td>
-												<td><?php echo $row->waktu_pesan; ?></td>
-												<td><?php echo $row->waktu_main; ?></td>
-												<td><?php echo $row->durasi; ?></td>
-                                                <td><?php echo $row->dp; ?></td>
-                                                <td><?php echo $row->diskon; ?></td>
-                                                <td><?php echo $row->total_bayar; ?></td>
+												<td><center><?php echo $row->id_pesan; ?></center></td>
+												<td><center><?php echo $row->waktu_pesan; ?></center></td>
+												<td><center><?php echo $row->waktu_main; ?></center></td>
+												<td><center><?php echo $row->durasi; ?></center></td>
+                                                <td><center><?php echo $row->dp; ?></center></td>
+                                                <td><center><?php echo $row->diskon; ?></center></td>
+                                                <td><center><?php echo $row->total_bayar; ?></center></td>
                                 				<td align="center"><a class="btn-xs btn-info" href="<?php echo base_url()?>/Pemesanan/update/<?php echo $row->id_pesan;?>"><span class="glyphicon-pencil">Ubah</span></a> <a class="btn-xs btn-danger" href="<?php echo base_url('Pemesanan/delete')?>/<?php echo $row->id_pesan; ?>"><span class="glyphicon-trash">Hapus</span></a></td>
 											</tr>
 											<?php
