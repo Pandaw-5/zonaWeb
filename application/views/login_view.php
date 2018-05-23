@@ -32,7 +32,7 @@
                         <strong> Admin </strong>  
                             </div>
                             <div class="panel-body">
-                                <form role="form" action="login" method="POST">
+                                <form role="form" action="beranda" method="POST">
                                   <div class="form-group">
                                   <input class="form-control" placeholder="Nama Pengguna" name="username_a" type="text" autofocus>
                                 </div>

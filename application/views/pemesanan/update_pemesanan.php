@@ -68,13 +68,13 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
 
   <form action="<?php echo base_url('Pemesanan/update')?>/<?php echo $model->id_pesan?>" method="post">
     <?php echo $model->labels['waktu_pesan']; ?><br>
-    <input type="text" name="waktu_pesan" size="30" maxlength="25" value="<?php echo $model->waktu_pesan; ?>"><br><br>
+    <input type="date" name="waktu_pesan" size="30" maxlength="25" value="<?php echo $model->waktu_pesan; ?>"><br><br>
 
     <?php echo $model->labels['waktu_main']; ?><br>
-    <input type="text" name="waktu_main" size="30" maxlength="25" value="<?php echo $model->waktu_main; ?>"><br><br>
+    <input type="TIME" name="waktu_main" size="30" maxlength="25" value="<?php echo $model->waktu_main; ?>"><br><br>
 
     <?php echo $model->labels['durasi']; ?><br>
-    <input type="text" name="durasi" size="30" maxlength="25" value="<?php echo $model->durasi; ?>"><br><br>
+    <input type="TIME" name="durasi" size="30" maxlength="25" value="<?php echo $model->durasi; ?>"><br><br>
 
     <?php echo $model->labels['dp']; ?><br>
     <input type="text" name="dp" size="30" maxlength="25" value="<?php echo $model->dp; ?>"><br><br>
