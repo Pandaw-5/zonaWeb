@@ -29,7 +29,7 @@ class pemesanan_model extends CI_Model{
 		$this->db->query($sql);
 	}
 	public function read(){
-		$sql = "SELECT * FROM pemesanan JOIN lapangan ORDER BY id_pesan";
+		$sql = "SELECT * FROM pemesanan JOIN lapangan WHERE pemesanan.id_lapangan = lapangan.id_lapangan ORDER BY id_pesan";
 		$query=$this->db->query($sql);
 		return $query->result();
 
