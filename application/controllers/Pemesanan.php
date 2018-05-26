@@ -22,6 +22,7 @@ class Pemesanan extends CI_Controller {
 			$this->model->dp = $_POST['dp'];
 			$this->model->diskon = $_POST['diskon'];
 			$this->model->total_bayar = $_POST['total_bayar'];
+			$this->model->id_lapangan = $_POST['id_lapangan'];
 			$this->model->insert();
 			redirect(base_url('Pemesanan'));
 		}else{
@@ -45,6 +46,7 @@ class Pemesanan extends CI_Controller {
 			$this->model->dp = $_POST['dp'];
 			$this->model->diskon = $_POST['diskon'];
 			$this->model->total_bayar = $_POST['total_bayar'];
+			$this->model->id_lapangan = $_POST['id_lapangan'];
 			$this->model->update();
 			redirect(base_url('Pemesanan'));
 	}else{
@@ -57,6 +59,7 @@ class Pemesanan extends CI_Controller {
 			$this->model->dp = $row->dp;
 			$this->model->diskon = $row->diskon;
 			$this->model->total_bayar = $row->total_bayar;
+			$this->model->id_lapangan = $row->id_lapangan;
 			$this->load->view('pemesanan/update_pemesanan', ['model'=>$this->model]);
 		}
 	}

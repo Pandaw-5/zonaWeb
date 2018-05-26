@@ -28,6 +28,7 @@
                                             <th width="100"><center>Diskon</center></th>
                                             <th width="100"><center>Total Bayar </center></th>
                                             <th width="100"><center>Status</center></th>
+                                            <th width="100"><center>Lapangan</center></th>
                                             <th width="100"><center>Opsi</center></th>
                                         </tr>
                                     </thead>
@@ -47,6 +48,7 @@
                                                 <td><center><?php echo $row->diskon; ?></center></td>
                                                 <td><center><?php echo $row->total_bayar; ?></center></td>
                                                 <td><center><?php echo $row->status; ?></center></td>
+                                                <td><center><?php echo $row->tipe_lapangan; ?></center></td>
                                 				<td align="center"><a class="btn-xs btn-info" href="<?php echo base_url()?>/Pemesanan/update/<?php echo $row->id_pesan;?>"><span class="glyphicon-pencil">Ubah</span></a> <a class="btn-xs btn-danger" href="<?php echo base_url('Pemesanan/delete')?>/<?php echo $row->id_pesan; ?>"><span class="glyphicon-trash">Hapus</span></a></td>
 											</tr>
 											<?php

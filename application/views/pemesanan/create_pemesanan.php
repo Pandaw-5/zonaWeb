@@ -84,6 +84,12 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
     <?php echo $model->labels['diskon']; ?><br>
     <input placeholder="potongan harga" type="text" name="diskon" size="10" maxlength="10"><br><br>
 
+    <?php echo $model->labels['total_bayar']; ?><br>
+    <input placeholder="pembayaran" type="text" name="total_bayar" size="10" maxlength="10"><br><br>
+
+    <?php echo $model->labels['id_lapangan']; ?><br>
+    <select name="id_lapangan" maxlength="25"><option value="Lp01">Lapangan 1</option><option value="Lp02">Lapangan 2</option><option value="Lp03">Lapangan 3</option><option value="Lp04">Lapangan 4</option><option value="Lp05">Lapangan 5</option><option value="Lp06">Lapangan 6</option><option value="Lp07">Lapangan 7</option></select><br><br>
+
   
 
     <input type="submit" name="btnSubmit" value="Simpan">
