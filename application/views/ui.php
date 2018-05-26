@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>User</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -44,7 +44,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a class="active-menu" href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
+                        <a  href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
                         <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>

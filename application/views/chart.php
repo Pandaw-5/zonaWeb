@@ -46,7 +46,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a  href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a  href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
+                        <a  href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
                         <a class="active-menu" href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>

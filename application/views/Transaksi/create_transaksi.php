@@ -3,8 +3,8 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tentang Zona Futsal</title>
-	<!-- BOOTSTRAP STYLES-->
+    <title>Pemesanan Lapangan | Admin</title>
+  <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url();?>assets/css/font-awesome.css" rel="stylesheet" />
@@ -40,19 +40,21 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
           <li>
-                        <a class="active-menu"  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
+                        <a   href="<?php echo base_url()?>/Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a  href="<?php echo base_url()?>/User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a  href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
+                        <a class="active-menu"  href="<?php echo base_url()?>/Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
-                        <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
+                        <a  href="<?php echo base_url()?>/Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
-                      
-                  
+                     
+                    
+                             
+                    
                 </ul>
                
             </div>
@@ -60,14 +62,40 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-md-12">
-                     <h2>Admin Zona Futsal</h2>   
-                        <h5>Selamat Datang</h5>
-                    </div>
-                </div>              
-                
+
+        
+  <h2>TRANSAKSI</h2>
+  <p><strong>Tambah Data</strong></p>
+
+  <form action="<?php echo base_url('Transaksi/create')?>" method="post">
+
+    <?php echo $model->labels['id_transaksi']; ?><br>
+    <input placeholder="kosongkan" type="text" name="id_transaksi" size="10" maxlength="10"><br><br>
+
+    <?php echo $model->labels['waktu_pesan']; ?><br>
+    <input placeholder="tanggal pesan" type="date" name="waktu_pesan" size="30" maxlength="25"><br><br>
+
+    <?php echo $model->labels['waktu_main']; ?><br>
+    <input placeholder="jam" type="TIME" name="waktu_main" size="30" maxlength="25"><br><br>
+
+    <?php echo $model->labels['durasi']; ?><br>
+    <input placeholder="saat main" type="TIME" name="durasi" size="30" maxlength="25"><br><br>
+
+    <?php echo $model->labels['dp']; ?><br>
+    <input placeholder="pembayaran pertama" type="text" name="dp" size="10" maxlength="10"><br><br>
+
+    <?php echo $model->labels['diskon']; ?><br>
+    <input placeholder="potongan harga" type="text" name="diskon" size="10" maxlength="10"><br><br>
+
+    <?php echo $model->labels['total_bayar']; ?><br>
+    <input placeholder="jumlah bayar" type="text" name="total_bayar" size="10" maxlength="10"><br><br>
+
+    <input type="submit" name="btnSubmit" value="Simpan">
+    <input type="button" name="batal" onclick="javascript:history.go(-1);" value="Batal">
+  </form>
+
+         <!-- /. PAGE WRAPPER  -->
+        </div>
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
@@ -79,9 +107,16 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
      <!-- MORRIS CHART SCRIPTS -->
      <script src="<?php echo base_url();?>assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/morris/morris.js"></script>
+
+    <script src="<?php echo base_url();?>assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="<?php echo base_url();?>assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
       <!-- CUSTOM SCRIPTS -->
     <script src="<?php echo base_url();?>assets/js/custom.js"></script>
-    
    
 </body>
 </html>

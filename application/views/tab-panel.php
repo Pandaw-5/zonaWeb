@@ -41,10 +41,10 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a href="ui"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a class="active-menu" href="tab_panel"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
+                        <a class="active-menu" href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
                         <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
@@ -55,16 +55,11 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
             
         </nav>  
         <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
-            <div id="page-inner">
-                <div class="row">
-                    <div class="col-md-12">
-                     <h2>Transaksi</h2>
-                       
-                    </div>
-                </div>
+        <
                  <!-- /. ROW  -->
-                 
+                 <div id="page-wrapper" >
+            <?php $this->load->view($body)?>
+
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->

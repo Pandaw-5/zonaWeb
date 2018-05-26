@@ -17,11 +17,11 @@ class pemesanan_model extends CI_Model{
 		$this->load->database(); //fungsi untuk memuat database
 	}
 	public function insert(){
-		$sql = sprintf("INSERT INTO pemesanan VALUES (NULL ,'%s','%s','%f','%d','%d','%d')", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar);
+		$sql = sprintf("INSERT INTO pemesanan VALUES (NULL ,'%s','%s','%f','%d','%d','%d','belum dibayar')", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar);
 		$this->db->query($sql);
 	}
 	public function update(){
-		$sql = sprintf("UPDATE pemesanan SET waktu_pesan ='%s',waktu_main ='%s',durasi='%d',dp='%d',diskon='%d', total_bayar='%f' WHERE id_pesan='%s'", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_pesan);
+		$sql = sprintf("UPDATE pemesanan SET waktu_main ='%s',durasi='%d',dp='%d',diskon='%d', total_bayar='%f' WHERE id_pesan='%s'",  $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_pesan);
 		$this->db->query($sql);
 	}
 	public function delete(){
@@ -32,6 +32,11 @@ class pemesanan_model extends CI_Model{
 		$sql = "SELECT * FROM pemesanan ORDER BY id_pesan";
 		$query=$this->db->query($sql);
 		return $query->result();
+
+	}
+	public function konfirmasi(){
+		$sql = sprintf("UPDATE pemesanan SET status = sudah dibayar", $this->status);
+		$this->db->query($sql);
 	}
 	private function attributeLabels(){
 		return[
@@ -41,7 +46,8 @@ class pemesanan_model extends CI_Model{
 		'durasi'=>'Durasi :',
 		'dp'=>'DP :',
 		'diskon'=>'Diskon :',
-		'total_bayar'=>'Total Bayar :'
+		'total_bayar'=>'Total Bayar :',
+		'status'=>'Status :'
 		];
 	}
 }

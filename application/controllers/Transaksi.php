@@ -1,12 +1,12 @@
 <?php  
-class Pemesanan extends CI_Controller {
+class Transaksi extends CI_Controller {
 	public $model = NULL;
 
 	public function __construct(){
 		parent::__construct();
 		//load model, gunakan fungsi
-		$this->load->model('Pemesanan_model');
-		$this->model = $this->Pemesanan_model;
+		$this->load->model('Model_Transaksi');
+		$this->model = $this->Model_Transaksi;
 		$this->load->database();
 		$this->load->helper ('url');//sebagai redirect
 
@@ -23,22 +23,22 @@ class Pemesanan extends CI_Controller {
 			$this->model->diskon = $_POST['diskon'];
 			$this->model->total_bayar = $_POST['total_bayar'];
 			$this->model->insert();
-			redirect(base_url('Pemesanan'));
+			redirect(base_url('Transaksi'));
 		}else{
-			$this->load->view('pemesanan/create_pemesanan',['model'=>$this->model]);
+			$this->load->view('Transaksi/create_transaksi',['model'=>$this->model]);
 		}
 	}
 	public function read(){
 		$rows = $this->model->read();
-		$this->load->view('chart', [
+		$this->load->view('tab-panel', [
 			'rows'	=>	$rows,
-			'body'	=> "pemesanan/read_pemesanan",
+			'body'	=> "Transaksi/read_transaksi",
 		]);
 	}
 	public function update ($kode_up){
 		if (isset($_POST['btnSubmit'])){
 			$id = $kode_up;
-			$this->model->id_pesan = $id;
+			$this->model->id_transaksi = $id;
 			$this->model->waktu_pesan = $_POST['waktu_pesan'];
 			$this->model->waktu_main = $_POST['waktu_main'];
 			$this->model->durasi = $_POST['durasi'];
@@ -46,32 +46,24 @@ class Pemesanan extends CI_Controller {
 			$this->model->diskon = $_POST['diskon'];
 			$this->model->total_bayar = $_POST['total_bayar'];
 			$this->model->update();
-			redirect(base_url('Pemesanan'));
+			redirect(base_url('Transaksi'));
 	}else{
 			$query = $this->db->query("SELECT * FROM pemesanan WHERE id_pesan='$kode_up'");
 			$row = $query->row();
-			$this->model->id_pesan = $row->id_pesan;
+			$this->model->id_transaksi = $row->id_transaksi;
 			$this->model->waktu_pesan = $row->waktu_pesan;
 			$this->model->waktu_main = $row->waktu_main;
 			$this->model->durasi = $row->durasi;
 			$this->model->dp = $row->dp;
 			$this->model->diskon = $row->diskon;
 			$this->model->total_bayar = $row->total_bayar;
-			$this->load->view('pemesanan/update_pemesanan', ['model'=>$this->model]);
+			$this->load->view('Transaksi/update_transaksi', ['model'=>$this->model]);
 		}
 	}
 	public function delete ($kode_del){
-		$this->model->id_pesan = $kode_del;
+		$this->model->id_transaksi = $kode_del;
 		$this->model->delete();
-		redirect(base_url('Pemesanan'));
-		}
-	
-	public function konfirmasi ($kode_konf){
-		$id = $kode_konf;
-		$this->model->id_pesan = $id;
-		$this->model->konfirmasi();
-		redirect(base_url('Pemesanan'));
-		
+		redirect(base_url('Transaksi'));
 	}
 }
 ?>
