@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 class Model_Transaksi extends CI_Model{
 	//buat 4 tipe variabel dengan tipe public dengan nama seperti nama kolom di tabel barang
 	public $id_transaksi;
@@ -46,3 +47,17 @@ class Model_Transaksi extends CI_Model{
 	}
 }
 ?>
+=======
+class Model_Tansaksi extends CI_Model {
+	
+	function get_table(){
+        return $this->db->get("pemesanan");
+    }
+    
+	function get_data(){
+		$query = $this->db->query("SELECT * FROM transaksi JOIN pemesanan WHERE pemesanan.id_pesan=transaksi.id_pesan");
+		return $query->result();
+	}
+
+}
+>>>>>>> 833d3bfcab338ba0e3dbe6e5953ad42ee4158b3d
