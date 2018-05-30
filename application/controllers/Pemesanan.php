@@ -16,6 +16,7 @@ class Pemesanan extends CI_Controller {
 	}
 	public function create(){
 		if(isset($_POST['btnSubmit'])){
+			$this->model->nama = $_POST['nama'];
 			$this->model->waktu_pesan = $_POST['waktu_pesan'];
 			$this->model->waktu_main = $_POST['waktu_main'];
 			$this->model->durasi = $_POST['durasi'];
@@ -31,9 +32,8 @@ class Pemesanan extends CI_Controller {
 	}
 	public function read(){
 		$rows = $this->model->read();
-		$this->load->view('chart', [
+		$this->load->view('pemesanan/read_pemesanan', [
 			'rows'	=>	$rows,
-			'body'	=> "pemesanan/read_pemesanan",
 		]);
 	}
 	public function update ($kode_up){

@@ -1,12 +1,12 @@
 <?php  
-class User extends CI_Controller {
+class Member extends CI_Controller {
 	public $model = NULL;
 
 	public function __construct(){
 		parent::__construct();
 		//load model, gunakan fungsi
-		$this->load->model('User_model');
-		$this->model = $this->User_model;
+		$this->load->model('Member_model');
+		$this->model = $this->Member_model;
 		$this->load->database();
 		$this->load->helper ('url');//sebagai redirect
 
@@ -16,13 +16,9 @@ class User extends CI_Controller {
 	}
 	public function read(){
 		$rows = $this->model->read();
-		$this->load->view('user/read_user', [
+		$this->load->view('Member/read_member', [
 			'rows'	=>	$rows,
 		]);
-	}
-	public function transaksi($id){
-		$this->model->transaksi($id);
-			redirect(base_url('User'));
 	}
 	public function update ($kode_up){
 		if (isset($_POST['btnSubmit'])){
@@ -32,9 +28,9 @@ class User extends CI_Controller {
 			$this->model->alamat = $_POST['alamat'];
 			$this->model->no_tlp = $_POST['no_tlp'];
 			$this->model->update();
-			redirect(base_url('User'));
+			redirect(base_url('Member'));
 	}else{
-			$query = $this->db->query("SELECT * FROM user WHERE id_user='$kode_up'");
+			$query = $this->db->query("SELECT * FROM member WHERE id_member='$kode_up'");
 			$row = $query->row();
 			$this->model->id_user = $row->id_user;
 			$this->model->username = $row->username;

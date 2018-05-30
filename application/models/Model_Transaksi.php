@@ -16,10 +16,6 @@ class Model_Transaksi extends CI_Model{
 		$this->labels = $this->attributeLabels();
 		$this->load->database(); //fungsi untuk memuat database
 	}
-	public function insert(){
-		$sql = sprintf("INSERT INTO transaksi VALUES (NULL ,'%f','%f','%f','%f','%f','%f','total_bayar')", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar);
-		$this->db->query($sql);
-	}
 	public function update(){
 		$sql = sprintf("UPDATE transaksi SET waktu_pesan ='%s',waktu_main ='%s',durasi='%d',dp='%d',diskon='%d', total_bayar='%f' WHERE id_transaksi='%s'", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_transaksi);
 		$this->db->query($sql);

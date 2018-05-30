@@ -17,7 +17,7 @@ class pemesanan_model extends CI_Model{
 		$this->load->database(); //fungsi untuk memuat database
 	}
 	public function insert(){
-		$sql = sprintf("INSERT INTO pemesanan VALUES (NULL ,'%s','%s','%f','%d','%d','%d','belum dibayar', NULL, NULL,'%s')", $this->waktu_pesan, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_lapangan);
+		$sql = sprintf("INSERT INTO pemesanan VALUES (NULL ,'%s',CURRENT_TIMESTAMP,'%s','%f','%d','%d','%d','belum dibayar', NULL, NULL,'%s')", $this->nama, $this->waktu_main, $this->durasi, $this->dp, $this->diskon, $this->total_bayar, $this->id_lapangan);
 		$this->db->query($sql);
 	}
 	public function update(){
@@ -29,7 +29,7 @@ class pemesanan_model extends CI_Model{
 		$this->db->query($sql);
 	}
 	public function read(){
-		$sql = "SELECT * FROM pemesanan JOIN lapangan WHERE pemesanan.id_lapangan = lapangan.id_lapangan ORDER BY id_pesan";
+		$sql = "SELECT * FROM pemesanan JOIN lapangan JOIN user WHERE pemesanan.id_lapangan = lapangan.id_lapangan ORDER BY waktu_pesan";
 		$query=$this->db->query($sql);
 		return $query->result();
 
@@ -41,6 +41,7 @@ class pemesanan_model extends CI_Model{
 	private function attributeLabels(){
 		return[
 		'id_pesan'=>'Id Pesan :',
+		'nama'=>'Nama : ',
 		'waktu_pesan'=>'Waktu Pesan :',
 		'waktu_main'=>'Waktu Main :',
 		'durasi'=>'Durasi :',

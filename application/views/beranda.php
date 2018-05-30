@@ -39,16 +39,19 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                 <li class="text-center">
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
-          <li>
+                    <li>
                         <a class="active-menu"  href="Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a  href="User"><i class="fa fa-user fa-3x"></i> Info User</a>
+                    </li>
+                    <li>
+                        <a  href="Member"><i class="fa fa-desktop fa-3x"></i> Info Member</a>
                     </li>
                     <li>
                         <a  href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
-               <li  >
+                    <li  >
                         <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
                     </li> 
                       
@@ -64,7 +67,13 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                 <div class="row">
                     <div class="col-md-12">
                      <h2>Admin Zona Futsal</h2>   
-                        <h5>Selamat Datang</h5>
+                        <center><h5>Selamat Datang !!!</h5>
+                                <img src="<?php echo base_url();?>assets/img/zona.png" /></center>
+                    <p> Zona Futsal Jember merupakan tempat bermain Futsal dan lapangan yang sudah tidak asing lagi bagi pencinta Futsal khususnya Kota Jember, karena Zona Futsal Jember adalah tempat latihan sekalian tempat tanding atau sering diselanggarakan tournamen antar Kota maupun Tournamen Individu.</p>
+                    <p>Zona Futsal Jember terdapat 8 lapangan futsal di dalamnya. Zona Futsal Jember, Harga Perjamnya untuk main di Siang Hari seharga Rp.50.000. dan kalau di Malam Hari Per Jamnya Rp.100.000 di karenakan biaya Listrik lampunya juga . Untuk biaya parkirnya dikenakan biaya Rp1000 untuk sepeda motor.</p>
+                    <p>Untuk Lokasi Zona Futsal Jember ini berada di Alamat Zona Futsal Jember di Jl.Tidar, No.17, Karengrejo, Sumbersari , Kabupaten Jember , Jawa Timur, 68124. Lokasi Zona Futsal Jember ini sangat stretegis sekali, dikarenakan di Zona Futsal Jember berada di Pinggir jalan arah Selatan, jika kita dari Timur. dan Zona Futsal Jember ini dekat dengan yang namanya Cafe, Cafe Unik, dan Pom Mini.</p>
+
+                    <p> Zona Futsal Jember juga menyediakan Aksesoris Futsal , seperti Tas Futsal, Celana Futsal dan masih banyak juga yang lainnya. Dan di ZOna Futsal Juga Free Wi-fi</p>
                     </div>
                 </div>              
                 

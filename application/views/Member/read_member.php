@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laporan Transaksi</title>
+    <title>Member</title>
     <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -44,10 +44,10 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a  href="User"><i class="fa fa-user fa-3x"></i> Info User</a>
                     </li>
                     <li>
-                        <a  href="Member"><i class="fa fa-desktop fa-3x"></i> Info Member</a>
+                        <a  class="active-menu" href="Member"><i class="fa fa-desktop fa-3x"></i> Info Member</a>
                     </li>
                     <li>
-                        <a  class="active-menu" href="Transaksi"><i class="fa fa-qrcode fa-3x"></i>Transaksi</a>
+                        <a  href="Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
                     </li>
                <li  >
                         <a   href="Pemesanan"><i class="fa fa-bar-chart-o fa-3x"></i> Pemesanan</a>
@@ -70,7 +70,7 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Laporan Transaksi</h2>   
+                     <h2>Member</h2>   
                         
                     </div>
                 </div>
@@ -86,14 +86,9 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th width="100"><center>User</center></th>
-                                            <th width="100"><center>Admin</center></th>
-                                            <th width="100"><center>Tanggal Pesan</center></th>
-                                            <th width="100"><center>Waktu Main</center></th>
-                                            <th width="100"><center>Durasi</center></th>
-                                            <th width="100"><center>DP</center></th>
-                                            <th width="100"><center>Diskon</center></th>
-                                            <th width="100"><center>Total Bayar </center></th>
+                                            <th width="100"><center>Username</center></th>
+                                            <th width="100"><center>Alamat</center></th>
+                                            <th width="100"><center>No Telephone</center></th>
                                             <th width="100"><center>Opsi</center></th>
                                         </tr>
                                     </thead>
@@ -103,20 +98,14 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                                             ?>
 
                                             <tr>
-
-                                                <td><center><?php echo $row->durasi; ?></center></td>
-                                                <td><center><?php echo $row->dp; ?></center></td>
-                                                <td><center><?php echo $row->waktu_pesan; ?></center></td>
-                                                <td><center><?php echo $row->waktu_main; ?></center></td>
-                                                <td><center><?php echo $row->durasi; ?></center></td>
-                                                <td><center><?php echo $row->dp; ?></center></td>
-                                                <td><center><?php echo $row->diskon; ?></center></td>
-                                                <td><center><?php echo $row->total_bayar; ?></center></td>
+                                                <td><?php echo $row->username; ?></td>
+                                                <td><?php echo $row->alamat; ?></td>
+                                                <td><?php echo $row->no_tlp; ?></td>
                                                 <td align="center">
-                                                    <a class="btn-xs btn-info" href="<?php echo base_url()?>/Transaksi/update/<?php echo $row->id_pesan;?>">
-                                                        <span class="glyphicon-pencil">Ubah</span></a> 
-                                                    <a class="btn-xs btn-danger" href="<?php echo base_url('Transaksi/delete')?>/<?php echo $row->id_pesan; ?>"><span class="glyphicon-trash">Hapus</span></a>
-                                                    </td>
+                                                    <a class="btn-xs btn-primary" href="<?php echo base_url()?>/Member/transaksi/<?php echo $row->id_user;?>"><span class="glyphicon-pencil">Transaksi</span></a> 
+                                                    <a class="btn-xs btn-info" href="<?php echo base_url()?>/Member/update/<?php echo $row->id_user;?>"><span class="glyphicon-pencil">Ubah</span></a> 
+                                                    <a class="btn-xs btn-danger" href="<?php echo base_url('Member/delete')?>/<?php echo $row->id_user; ?>"><span class="glyphicon-trash">Hapus</span></a>
+                                                </td>
                                             </tr>
                                             <?php
                                             }

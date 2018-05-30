@@ -30,7 +30,7 @@
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;">  &nbsp; <a href="<?php echo base_url()?>/login" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -39,11 +39,14 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                 <li class="text-center">
                     <img src="<?php echo base_url();?>assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
-          <li>
+                    <li>
                         <a   href="<?php echo base_url()?>/Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="<?php echo base_url()?>/User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a  href="<?php echo base_url()?>/User"><i class="fa fa-user fa-3x"></i> Info User</a>
+                    </li>
+                    <li>
+                        <a  href="Member"><i class="fa fa-desktop fa-3x"></i> Info Member</a>
                     </li>
                     <li>
                         <a  href="<?php echo base_url()?>/Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>
@@ -62,16 +65,20 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-
+        <div id="page-inner">
+          <div class="row">
+            <div class="col-md-12">
+              
+           
         
   <h2>Pemesanan</h2>
   <p><strong>Tambah Data</strong></p>
 
   <form action="<?php echo base_url('Pemesanan/create')?>" method="post">
 
-    <?php echo $model->labels['waktu_pesan']; ?><br>
-    <input type="date" name="waktu_pesan" size="30" maxlength="25"><br><br>
-
+    <?php echo $model->labels['nama']; ?><br>
+    <input placeholder="Masukkan Nama" type="text" name="nama" size="30" maxlength="30"><br><br>
+    
     <?php echo $model->labels['waktu_main']; ?><br>
     <input placeholder="jam" type="TIME" name="waktu_main" size="30" maxlength="25"><br><br>
 
@@ -95,7 +102,9 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
     <input type="submit" name="btnSubmit" value="Simpan">
     <input type="button" name="batal" onclick="javascript:history.go(-1);" value="Batal">
   </form>
-
+ </div>
+          </div>
+        </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->

@@ -43,7 +43,10 @@ font-size: 16px;">  &nbsp; <a href="login" class="btn btn-danger square-btn-adju
                         <a   href="<?php echo base_url()?>/Beranda"><i class="fa fa-dashboard fa-3x"></i> Tentang</a>
                     </li>
                      <li>
-                        <a  href="<?php echo base_url()?>/User"><i class="fa fa-desktop fa-3x"></i> Info User</a>
+                        <a  href="<?php echo base_url()?>/User"><i class="fa fa-user fa-3x"></i> Info User</a>
+                    </li>
+                    <li>
+                        <a  href="Member"><i class="fa fa-desktop fa-3x"></i> Info Member</a>
                     </li>
                     <li>
                         <a  href="<?php echo base_url()?>/Transaksi"><i class="fa fa-qrcode fa-3x"></i> Transaksi</a>

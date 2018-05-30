@@ -14,25 +14,10 @@ class Transaksi extends CI_Controller {
 	public function index(){
 		$this->read();
 	}
-	public function create(){
-		if(isset($_POST['btnSubmit'])){
-			$this->model->waktu_pesan = $_POST['waktu_pesan'];
-			$this->model->waktu_main = $_POST['waktu_main'];
-			$this->model->durasi = $_POST['durasi'];
-			$this->model->dp = $_POST['dp'];
-			$this->model->diskon = $_POST['diskon'];
-			$this->model->total_bayar = $_POST['total_bayar'];
-			$this->model->insert();
-			redirect(base_url('Transaksi'));
-		}else{
-			$this->load->view('Transaksi/create_transaksi',['model'=>$this->model]);
-		}
-	}
 	public function read(){
 		$rows = $this->model->read();
-		$this->load->view('tab-panel', [
+		$this->load->view('Transaksi/read_transaksi', [
 			'rows'	=>	$rows,
-			'body'	=> "Transaksi/read_transaksi",
 		]);
 	}
 	public function update ($kode_up){
